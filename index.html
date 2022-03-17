@@ -5,13 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kadeem</title>
-
   <!-- css fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&family=Montserrat:wght@200;400;600;700;900&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/fontawesome/css/brands.min.css">
+  <link rel="stylesheet" href="assets/fontawesome/css/solid.min.css">
   <!-- css style sheets -->
   <link rel="stylesheet" href="css/index.css">
+  <!-- javascript library -->
 </head>
 <body>
   <main id="pageContent">
@@ -43,10 +47,89 @@
 
     <section id="aboutSection">
       <div class="sectionContainer _pageCentered_">
-        <h2>About</h2>
+        <h2 class="sectionTitle">About</h2>
+        <div class="textContent">
+          <p class="par1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio minus totam aut non? Possimus, incidunt minus hic assumenda eaque iste, consequuntur sapiente rerum iure facere, saepe mollitia commodi sed nostrum?
+          </p>
+          <p class="par2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo pariatur sit consequatur doloremque sint odio fugiat voluptatibus deserunt iusto dolor mollitia, quisquam possimus molestiae perspiciatis in nam numquam ullam modi voluptatum temporibus accusantium hic dolores autem quo. Consectetur quasi officia debitis expedita illo, delectus culpa eveniet sed, velit voluptates quisquam ea, porro eum dolor tempora?
+          </p>
+          <div class="technologiesGroup">
+            <p class="technology technology1">
+              <span class="icon"> <i class="fa-brands fa-html5"></i> </span>
+              <span class="title"> HTML 5</span>
+            </p>
+            <p class="technology technology2">
+              <span class="icon"> <i class="fa-brands fa-css3-alt"></i> </span>
+              <span class="title"> CSS 3 </span>
+            </p>
+            <p class="technology technology3">
+              <span class="icon"> <i class="fa-brands fa-js-square"></i> </span>
+              <span class="title"> Javascript </span>
+            </p>
+            <p class="technology technology4">
+              <span class="icon"> <i class="fa-brands fa-github"></i> </span>
+              <span class="title"> Github </span>
+            </p>
+            <p class="technology technology5">
+              <span class="icon"> <i class="fa-brands fa-sass"></i> </span>
+              <span class="title"> Sass </span>
+            </p>
+            <p class="technology technology6">
+              <span class="icon"> <i class="fa-brands fa-figma"></i> </span>
+              <span class="title"> Figma </span>
+            </p>
+            <p class="technology technology7">
+              <span class="icon"> <i class="fa-solid fa-gamepad"></i> </span>
+              <span class="title"> Web Games </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="workSection">
+      <div class="sectionContainer _pageCentered_">
+        <h2 class="sectionTitle">Work</h2>
+        <div id="workGroup">
+
+          <div class="work">
+            <img src="images/projectImages/thumbnails/Furniture_Palace_thumb.jpg" alt="">
+            <h2 class="workTitle">Furniture Palace</h2>
+            <p class="workText">A furniture seller website</p>
+            <a href="https://kdeem.github.io/lpg_furnitureSeller/" class="action">Visit</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contactSection">
+      <div class="sectionContainer _pageCentered_">
+        <h2 class="sectionTitle">Contact</h2>
+
+        <div class="whatsappContact">
+          <div id="qr_background_WB">
+            <img src="images/WB QRcode.svg" alt="" id="qr_code_WB">
+          </div>
+
+          <div class="actions">
+            <a class="contactButton">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span class="text">Start a Chat</span>
+            </a>
+            <div id="copy_whatsapp_link" class="clipboardButton">
+              <i class="fa-solid fa-copy"></i>
+            </div>
+          </div>
+          
+        </div>
+
       </div>
     </section>
 
   </main>
+  <script defer src="js/index.js"></script>
 </body>
 </html>

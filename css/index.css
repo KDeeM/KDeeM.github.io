@@ -2,7 +2,11 @@
 
 :root{
   --main-color: #34C2C2;
+  --main-color-m: #9FD7D7;
+  --main-color-l: #D1F0F0;
   --secondary-color: #1D5B5F;
+  --secondary-color-m: #249485;
+  --secondary-color-l: #00BFA6;
   --base-white: #F6FEFF;
 
   --main-font: 'Montserrat', sans-serif;
@@ -15,6 +19,7 @@ body{
   font-family: var(--main-font);
 }
 main#pageContent{
+  width: 100%;
   min-width: 320px;
 }
 
@@ -22,6 +27,16 @@ main#pageContent > section{
   position: relative;
 }
 
+.sectionTitle{
+  --TitleSize: 2rem;
+  text-decoration: underline;
+  font-family: var(--highlight-font);
+  font-size: var(--TitleSize);
+}
+
+/* ################################## */
+/* LANDING SECTION */
+/* ################################## */
 #landingSection{
   width: 100%;
   min-height: 100vh;
@@ -35,8 +50,8 @@ main#pageContent > section{
   left: 0;
   width: 100%;
   max-width: 100vw;
-  min-height: 420px;
-  max-height: 90vh;
+  min-height: 320px;
+  max-height: 90%;
   z-index: -1;
 }
 #landingSection .sectionContainer{
@@ -103,9 +118,136 @@ main#pageContent > section{
   max-height: 80vh;
 }
 
+/* ################################## */
+/* ABOUT SECTION */
+/* ################################## */
+#aboutSection, #contactSection{
+  background-color: var(--secondary-color);
+  color: var(--base-white);
+  font-weight: 500;
+
+  box-shadow: 0px -3px 10px 1px var(--secondary-color),
+              0px 3px 10px 1px var(--secondary-color);
+}
+#aboutSection .sectionContainer{
+  padding: 2rem 0 4rem;
+}
+#aboutSection .textContent{
+  margin: 1rem 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+#aboutSection .textContent .technologiesGroup{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+  color: var(--secondary-color);
+}
+#aboutSection .textContent .technologiesGroup .technology{
+  padding: .5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: .5rem;
+  background-color: var(--main-color-m);
+}
+#aboutSection .textContent .technologiesGroup .technology .icon{
+  font-size: 2rem;
+}
+#aboutSection .textContent .technologiesGroup .technology .title{
+  font-weight: 700;
+}
+
+/* ################################## */
+/* WORK SECTION */
+/* ################################## */
+#workSection .sectionContainer{
+  padding: 2rem 0 2rem;
+  overflow: hidden;
+}
+#workSection #workGroup{
+  margin: 2rem 0 0;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 360px) );
+  justify-content: center;
+}
+#workSection #workGroup .work img{
+  width: 100%;
+  max-width: 100%;
+}
+#workSection #workGroup .work .action{
+  display: block;
+  width: fit-content;
+  margin: .5rem 0 0;
+  padding: .25rem 1rem;
+
+  font-weight: 700;
+  background-color: var(--secondary-color);
+  border-radius: .25rem;
+  color: vaR(--base-white);
+}
+
+/* ################################## */
+/* CONTACT SECTION */
+/* ################################## */
+#contactSection .sectionContainer{
+  padding: 1rem 0 2rem;
+  overflow: hidden;
+}
+#contactSection .whatsappContact{
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#contactSection #qr_background_WB{
+  max-width: 280px;
+  padding: .75rem;
+  background-color: var(--main-color-m);
+  border-radius: .5rem;
+}
+#contactSection #qr_background_WB #qr_code_WB{
+  width: 100%;
+}
+#contactSection .actions{
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+#contactSection .contactButton{
+  display: block;
+  padding: .25rem 1rem;
+  width: fit-content;
+
+  background-color: var(--main-color-l);
+  color: var(--secondary-color);
+  border-radius: .5rem;
+}
+#contactSection .contactButton .text{
+  font-size: 1.25rem;
+}
+#contactSection .clipboardButton{
+  padding: .25rem .5rem;
+  width: fit-content;
+
+  background-color: var(--main-color-l);
+  color: var(--secondary-color);
+  border-radius: .5rem;
+}
 
 @media screen {
+  
   @media (min-width: 678px){
+    .sectionTitle{
+      --TitleSize: 3rem;
+    }
     #landingSection .sectionContainer .content{
       grid-area: 1 / 1 / 2 / 5;
     }
@@ -115,6 +257,20 @@ main#pageContent > section{
       /* flex-direction: column; */
       justify-content: center;
       align-items: center;
+    }
+
+    #aboutSection .textContent{
+      grid-template-columns: repeat( 12, 1fr );
+      gap: 2rem 1rem;
+    }
+    #aboutSection .textContent .par1{
+      grid-area: 1/ 1 / 2 / 7;
+    }
+    #aboutSection .textContent .par2{
+      grid-area: 1/ 7 / 2 / 13;
+    }
+    #aboutSection .textContent .technologiesGroup{
+      grid-area: 2/ 1 / 3 / 13;
     }
   }
 
